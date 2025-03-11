@@ -12,6 +12,12 @@ h1, h2, h3 {
     color: #2c3e50;
 }
 
+header {
+    background-color: #F5F5DC; /* Beige */
+    padding: 20px;
+    text-align: center;
+}
+
 section {
     margin-bottom: 30px;
 }
