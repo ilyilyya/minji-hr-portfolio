@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -8,39 +9,53 @@ body {
     color: #333;
 }
 
+/* Heading Styles */
 h1, h2, h3 {
     color: #2c3e50;
 }
 
+/* Header Section */
 header {
     background-color: #F5F5DC; /* Beige */
     padding: 20px;
     text-align: center;
 }
 
+/* Section Styling */
 section {
     margin-bottom: 30px;
 }
 
+/* Unordered List */
 ul {
     list-style-type: square;
     padding-left: 20px;
 }
 
+/* Link Styling */
 a {
     color: #2980b9;
     text-decoration: none;
 }
 
+/* Footer Styling */
 footer {
     text-align: center;
     margin-top: 20px;
-    padding: 10px;
-    background: #2c3e50;
-    color: white;
+    padding: 15px;
+    background-color: #2c3e50 !important; /* Dark Blue */
+    color: white !important;
     font-weight: bold;
 }
 
+/* Ensures uniform text color inside footer */
 footer span {
-    color: white !important; /* Ensures uniform color */
+    color: white !important;
+}
+
+/* Additional Debugging to Ensure Proper Loading */
+footer::after {
+    content: " (CSS Applied)"; /* This will help check if the CSS is being loaded */
+    font-size: 12px;
+    color: lightgray;
 }
