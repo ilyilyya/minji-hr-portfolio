@@ -10,16 +10,30 @@ body {
 
 h1, h2, h3 {
     color: #2c3e50;
+    margin-bottom: 10px;
 }
 
 header {
     background-color: #F5F5DC; /* Beige */
     padding: 20px;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 section {
     margin-bottom: 30px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #2c3e50;
+    padding-left: 10px;
+    color: #555;
 }
 
 ul {
@@ -32,15 +46,20 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 footer {
     text-align: center;
     margin-top: 20px;
-    padding: 10px;
+    padding: 15px;
     background: #2c3e50;
     color: white;
     font-weight: bold;
+    border-radius: 8px;
 }
 
-footer span {
-    color: white !important; /* Ensures uniform color */
+footer span, footer p, footer a {
+    color: white !important;
 }
