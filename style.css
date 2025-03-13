@@ -1,76 +1,69 @@
-/* General Reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f8f9fa;
     color: #333;
+}
+
+header {
+    background-color: #1d3557;
+    color: white;
+    padding: 15px;
     text-align: center;
 }
 
-/* Name Header */
-.name-header {
-    background-color: #ffffff;
-    padding: 20px 0;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
-.name-header h1 {
-    font-size: 36px;
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
     font-weight: bold;
-    color: #1f2937;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
     margin: 0;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #1f2937;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+h2 {
+    color: #1d3557;
+    border-bottom: 2px solid #1d3557;
+    padding-bottom: 5px;
 }
 
-.navbar-links a {
-    color: white;
+h3 {
+    color: #457b9d;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+a {
+    color: #1d3557;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
+    font-weight: bold;
 }
 
-.navbar-links a:hover {
+a:hover {
     text-decoration: underline;
-}
-
-/* Sections */
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Education Section */
-.education-entry {
-    text-align: left;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.education-entry:last-child {
-    border-bottom: none;
-}
-
-.education-entry h3 {
-    color: #1f2937;
-    margin-bottom: 5px;
-}
-
-.education-entry p {
-    margin: 5px 0;
-    font-size: 16px;
 }
