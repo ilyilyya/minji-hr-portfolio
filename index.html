@@ -52,12 +52,13 @@
             <li><strong>Committed to Growth</strong> – Continuously refining HR knowledge.</li>
         </ul>
 
-        <h2><a href="#" onclick="showResume()">My Resume</a></h2>
+        <h2><a href="#" onclick="showResume()">View My Resume</a></h2>
         <div id="resume-container" style="margin-top: 20px; display: none;">
             <iframe src="Minji-Choi-Resume.pdf" width="100%" height="600px"></iframe>
         </div>
         <script>
             function showResume() {
+                event.preventDefault();
                 document.getElementById('resume-container').style.display = 'block';
             }
         </script>
