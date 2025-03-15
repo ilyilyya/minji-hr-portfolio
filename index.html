@@ -50,17 +50,35 @@
             <li><strong>Proven Coordination Skills</strong> – Streamlined operations and increased efficiency.</li>
             <li><strong>Bilingual & Culturally Competent</strong> – Fluent in Korean and English.</li>
             <li><strong>Committed to Growth</strong> – Continuously refining HR knowledge.</li>
-        </ul>        
-        <h2 style="text-align: center;">
-            <a href="#" onclick="showResume(event)" style="text-decoration: none; color: #4f46e5; font-weight: 600;"> View My Resume</a>
-        </h2> 
-        <div id="resume-container" style="margin-top: 20px; display: none;">
-            <iframe src="Minji-Choi-Resume.pdf" width="100%" height="600px"></iframe>
+        </ul>    
+        <div style="text-align: center; margin-top: 30px;">
+        <a href="#" onclick="showResume(event)" style="display: inline-block; background-color: #4f46e5; color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      "
+      id="resume-toggle">View My Resume</a>
         </div>
+        
+        <div id="resume-container" style="margin-top: 30px auto; display: none; max-width: 800px;">
+            <iframe src="Minji-Choi-Resume.pdf" width="100%" height="600px" style="border: none;"></iframe>
+        </div>
+        
         <script>
             function showResume() {
                 event.preventDefault();
-                document.getElementById('resume-container').style.display = 'block';
+                const container = document.getElementById('resume-container');
+                const link = document.getElementById('resume-toggle');
+                if (container.style.display === 'none') {
+                    container.style.display = 'block';
+                    link.innerHTML = '❌ Hide My Resume';
+                } else {
+                    container.style.display = 'none';
+                    link.innerHTML = '📄 View My Resume';
+                }   
             }
         </script>
     </section>
