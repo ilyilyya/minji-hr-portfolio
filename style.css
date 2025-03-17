@@ -20,13 +20,18 @@ body {
 /* Header */
 header {
   background-color: #f5f5dc;
-  color: #2c3e50;
-  padding: 20px 0;
-  text-align: left; /* ✅ aligns title and button left */
-  padding-left: 20px;
+  padding: 20px;
 }
 
-header h1 {
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content h1 {
+  flex: 1;
+  text-align: center;
   margin: 0;
   font-size: 28px;
 }
@@ -39,8 +44,6 @@ header h1 {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  display: block;
-  margin: 10px 0;          /* ✅ aligns button left */
 }
 
 /* Navigation Menu */
@@ -48,18 +51,16 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 10px 0 0;
-  display: none;            /* ✅ Hidden by default */
+  display: none;
   flex-direction: column;
-  align-items: flex-start;  /* ✅ left-aligned */
-  padding-left: 20px;       /* ✅ spacing */
+  align-items: flex-start;
+  padding-left: 20px;
 }
 
-/* Show menu when .show class is added */
 nav ul.show {
   display: flex;
 }
 
-/* Menu items */
 nav ul li {
   margin: 10px 0;
 }
@@ -70,12 +71,15 @@ nav ul li a {
   font-weight: 600;
 }
 
-/* Responsive: on desktop, keep it left-aligned */
 @media (min-width: 769px) {
   nav ul.show {
     flex-direction: row;
-    justify-content: flex-start;  /* ✅ stays on left */
+    justify-content: flex-start; /* align left */
     gap: 1.5rem;
+    padding-left: 0;
+  }
+
+  nav ul {
     padding-left: 20px;
   }
 
