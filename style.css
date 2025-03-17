@@ -53,6 +53,7 @@ header {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  z-index: 2;
 }
 
 /* Navigation Menu */
@@ -83,13 +84,17 @@ nav ul li a {
 
 @media (min-width: 769px) {
   nav ul {
-    display: flex !important;
+    display: none !important;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     padding-left: 0;
     margin-top: 10px;
     gap: 1.5rem;
+  }
+
+  nav ul.show {
+    display: flex !important;
   }
 
   nav ul li {
