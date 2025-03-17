@@ -22,7 +22,8 @@ header {
   background-color: #f5f5dc;
   color: #2c3e50;
   padding: 20px 0;
-  text-align: center;
+  text-align: left; /* ✅ aligns title and button left */
+  padding-left: 20px;
 }
 
 header h1 {
@@ -39,7 +40,7 @@ header h1 {
   padding: 0.5rem 1rem;
   cursor: pointer;
   display: block;
-  margin: 10px auto;
+  margin: 10px 0;          /* ✅ aligns button left */
 }
 
 /* Navigation Menu */
@@ -47,12 +48,13 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 10px 0 0;
-  display: none; /* ✅ Hidden by default */
+  display: none;            /* ✅ Hidden by default */
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;  /* ✅ left-aligned */
+  padding-left: 20px;       /* ✅ spacing */
 }
 
-/* ✅ Show menu when .show is toggled by JS */
+/* Show menu when .show class is added */
 nav ul.show {
   display: flex;
 }
@@ -68,16 +70,17 @@ nav ul li a {
   font-weight: 600;
 }
 
-/* Responsive: on desktop, make it horizontal */
+/* Responsive: on desktop, keep it left-aligned */
 @media (min-width: 769px) {
   nav ul.show {
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;  /* ✅ stays on left */
     gap: 1.5rem;
+    padding-left: 20px;
   }
 
   nav ul li {
-    margin: 0 15px;
+    margin: 0 15px 0 0;
   }
 }
 
