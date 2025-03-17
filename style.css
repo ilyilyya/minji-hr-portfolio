@@ -19,7 +19,7 @@ body {
 
 /* Header */
 header {
-  background-color: #f5f5dc; /* ✅ Beige */
+  background-color: #f5f5dc;
   color: #2c3e50;
   padding: 20px 0;
   text-align: center;
@@ -30,7 +30,7 @@ header h1 {
   font-size: 28px;
 }
 
-/* ✅ Menu Toggle Button (simple black text) */
+/* Menu Toggle Button */
 #menu-toggle {
   background: none;
   border: none;
@@ -47,18 +47,38 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 10px 0 0;
-  display: flex;
-  justify-content: center;
+  display: none; /* ✅ Hidden by default */
+  flex-direction: column;
+  align-items: center;
 }
 
+/* ✅ Show menu when .show is toggled by JS */
+nav ul.show {
+  display: flex;
+}
+
+/* Menu items */
 nav ul li {
-  margin: 0 15px;
+  margin: 10px 0;
 }
 
 nav ul li a {
   color: #2c3e50;
   text-decoration: none;
   font-weight: 600;
+}
+
+/* Responsive: on desktop, make it horizontal */
+@media (min-width: 769px) {
+  nav ul.show {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
 }
 
 /* Sections */
@@ -86,21 +106,4 @@ ul {
   color: #2c3e50;
   font-weight: 600;
   text-decoration: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .container {
-    width: 95%;
-    padding: 15px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin-bottom: 10px;
-  }
 }
